@@ -52,7 +52,7 @@
             alert(mensagem);
         }
 
-      nop.addEventListener('click'&&'mouseover',function () {
+      nop.addEventListener('click',function () {
      var newTop = Math.floor(Math.random() * sectionHeight - 100)
     var newLeft = Math.floor(Math.random() * sectionWidth - 30)
     nop.style.top = newTop + 'px'
@@ -62,7 +62,22 @@
         alert('ok, compreendo que minhas ações têm consequências, irei procurar melhorar como pessoa. Adeus.... 😓  ');
     }
  }
+ 
+ 
       )
+      nop.addEventListener('mouseover',function () {
+     var newTop = Math.floor(Math.random() * sectionHeight - 100)
+    var newLeft = Math.floor(Math.random() * sectionWidth - 30)
+    nop.style.top = newTop + 'px'
+    nop.style.left = newLeft + 'px'
+    mover++
+    if (mover === 10) {
+        alert('ok, compreendo que minhas ações têm consequências, irei procurar melhorar como pessoa. Adeus.... 😓  ');
+    }
+ }
+ 
+ 
+      )     
         // Vinculando a função ao evento de clique do botão
         var botao = document.getElementById("botaoDesculpa")
         botao.addEventListener("click", exibirDesculpa)
