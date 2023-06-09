@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desculpa Fofa</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #mensagem {
+            font-size: 24px;
+            margin-top: 100px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #FFC0CB;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #nop{
+            position: relative;
+        }
+        #corpo{
+            height: 400px;
+            width: 400px;
+            margin-left:auto;
+            margin-right:auto;
+
+        }
+    </style>
+</head>
+<body>
+    <section id="corpo">
+        <div id="mensagem">Desculpe-me, você é especial para mim!</div>
+        <button id="botaoDesculpa">Aceitar Desculpa</button>
+        <button id="nop">NÃO!!!!! 🤬🤬🤬 </button>
+    </section>
+
+    <script>
+
+        const nop = document.getElementById('nop')
+        const corpo = document.getElementById('corpo')
+        let mover = 0
+                 var sectionWidth = corpo.clientWidth
+         var sectionHeight = corpo.clientHeight
+        // Função para exibir uma mensagem de desculpas ao clicar no botão
+        function exibirDesculpa() {
+            var mensagem = "Eu sinto muito por qualquer coisa que eu tenha feito ou dito. Você é importante para mim e eu não queria te magoar. Por favor, me perdoe!";
+            alert(mensagem);
+        }
+
+      nop.addEventListener('mouseover',function () {
+     var newTop = Math.floor(Math.random() * sectionHeight - 100)
+    var newLeft = Math.floor(Math.random() * sectionWidth - 30)
+    nop.style.top = newTop + 'px'
+    nop.style.left = newLeft + 'px'
+    mover++
+    if (mover === 10) {
+        alert('ok, compreendo que minhas ações têm consequências, irei procurar melhorar como pessoa. Adeus.... 😓  ');
+    }
+ }
+      )
+        // Vinculando a função ao evento de clique do botão
+        var botao = document.getElementById("botaoDesculpa")
+        botao.addEventListener("click", exibirDesculpa)
+
+    </script>
+</body>
+</html>
