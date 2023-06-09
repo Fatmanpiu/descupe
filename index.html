@@ -27,20 +27,34 @@
         position: relative;
     }
     #corpo{
+        color: black;
         height: 400px;
         width: 535px;
-        margin-top: 15%;
         margin-left:auto;
         margin-right:auto;
 
     }
+    #baner{
+        overflow: hidden;
+        height: 195px;
+        width: 300px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    #foto{
+        height: 195px;
+        width: 300px; 
+    }
 </style>
 <body>
-<section id="corpo">
-    <div id="mensagem">Desculpe-me, você é especial para mim!</div>
-    <button id="botaoDesculpa">Aceitar Desculpa</button>
-    <button id="nop">NÃO!!!!! 🤬🤬🤬 </button>
-</section>
+<main>
+    <section id="corpo">
+        <div id="mensagem">Desculpe-me, você é especial para mim!</div>
+        <div id="baner"><img src="desculpa.jpg" id="foto"></div>
+        <button id="botaoDesculpa">Aceitar Desculpa</button>
+        <button id="nop">NÃO!!!!! 🤬🤬🤬 </button>
+    </section>
+</main>
 
 <script>
 
@@ -52,7 +66,7 @@
     // Função para exibir uma mensagem de desculpas ao clicar no botão
     function exibirDesculpa() {
         var mensagem = "Eu sinto muito por qualquer coisa que eu tenha feito ou dito. Você é importante para mim e eu não queria te magoar. Por favor, me perdoe!";
-        alert(mensagem);
+        alert(mensagem)
     }
 
   nop.addEventListener('click',function () {
