@@ -6,9 +6,15 @@
     <title>Desculpa</title>
 </head>
 <style>
+    *{
+        height: auto;
+        background: fixed;
+    }
     body {
         text-align: center;
         font-family: Arial, sans-serif;
+        background-image: linear-gradient(to top, #ff0040, #6141233a );
+        color: black;
     }
     #mensagem {
         font-size: 40px;
@@ -49,8 +55,11 @@
 </style>
 <body>
 <main>
-   
-        <div id="mensagem">Desculpe-me, você é especial para mim!</div>
+        <div id="mensagem">
+            <audio id="meuaudio" src="lalaokok.mp3">
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            Desculpe-me, você é especial para mim!</div>
         <div id="baner"><img src="desculpa.jpg" id="foto"></div>
          <section id="corpo">
         <button id="botaoDesculpa">Aceitar Desculpa</button>
@@ -59,16 +68,19 @@
 </main>
 
 <script>
-
+    const audio = document.getElementById("meuaudio");
     const nop = document.getElementById('nop')
     const corpo = document.getElementById('corpo')
     let mover = 0
-             var sectionWidth = corpo.clientWidth
+     var sectionWidth = corpo.clientWidth
      var sectionHeight = corpo.clientHeight
     // Função para exibir uma mensagem de desculpas ao clicar no botão
     function exibirDesculpa() {
-        var mensagem = "Eu sinto muito por qualquer coisa que eu tenha feito ou dito. Você é importante para mim e eu não queria te magoar. Por favor, me perdoe!";
+        audio.play()
+    botao.innerHTML = ':)'
+        var mensagem = "Eu sinto muito por qualquer coisa que eu tenha feito ou dito. Você é importante para mim e eu não queria te magoar. obrigado, pela segunda chance :)";
         alert(mensagem)
+
     }
 
   nop.addEventListener('click',function () {
@@ -77,9 +89,9 @@ var newLeft = Math.floor(Math.random() * sectionWidth - 30)
 nop.style.top = newTop + 'px'
 nop.style.left = newLeft + 'px'
 mover++
-if (mover === 3) {
+if (mover === 4) {
     alert('ok, compreendo que minhas ações têm consequências, irei procurar melhorar como pessoa. Adeus.... 😓  ');
-    
+     
 }
 }
 
@@ -91,8 +103,10 @@ var newLeft = Math.floor(Math.random() * sectionWidth - 30)
 nop.style.top = newTop + 'px'
 nop.style.left = newLeft + 'px'
 mover++
-if (mover === 3) {
-    alert('ok, compreendo que minhas ações têm consequências, irei procurar melhorar como pessoa. Adeus.... 😓  ');
+
+if (mover === 4) {
+    alert('ok, compreendo que minhas ações têm consequências, irei procurar melhorar como pessoa. Adeus.... 😓  ')
+    nop.innerHTML =':('
 }
 }
 
@@ -101,6 +115,8 @@ if (mover === 3) {
     // Vinculando a função ao evento de clique do botão
     var botao = document.getElementById("botaoDesculpa")
     botao.addEventListener("click", exibirDesculpa)
+    
+
 
 </script>
 </body>
