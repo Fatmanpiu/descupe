@@ -6,13 +6,14 @@
     <title>Desculpa</title>
 </head>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
     *{
         height: auto;
         background: fixed;
     }
     body {
         text-align: center;
-        font-family: Arial, sans-serif;
+        font-family: 'Delicious Handrawn', cursive;
         background-image: linear-gradient(to top, #ff0040, #6141233a );
         color: black;
     }
@@ -21,10 +22,11 @@
         margin-top: 100px;
     }
     button {
+        font-family: 'Delicious Handrawn', cursive;
         margin-top: 20px;
         padding: 10px 20px;
-        font-size: 20px;
-        background-color: #FFC0CB;
+        font-size: 25px;
+        background-color: #ffc0cb;
         color: black;
         border: none;
         border-radius: 5px;
@@ -51,6 +53,7 @@
     #foto{
         height: 195px;
         width: 300px; 
+        border-radius: 5px;
     }
 </style>
 <body>
@@ -60,6 +63,7 @@
                 Seu navegador não suporta o elemento de áudio.
               </audio>
             Desculpe-me, você é especial para mim!</div>
+            <br>
         <div id="baner"><img src="desculpa.jpg" id="foto"></div>
          <section id="corpo">
         <button id="botaoDesculpa">Aceitar Desculpa</button>
@@ -91,7 +95,7 @@ nop.style.left = newLeft + 'px'
 mover++
 if (mover === 4) {
     alert('ok, compreendo que minhas ações têm consequências, irei procurar melhorar como pessoa. Adeus.... 😓  ');
-     
+    nop.innerHTML =':(' 
 }
 }
 
